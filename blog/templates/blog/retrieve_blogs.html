@@ -1,0 +1,16 @@
+<!-- blog/templates/blog/retrieve_blogs.html -->
+{% extends 'blog/base.html' %}
+
+{% block title %}Blog List{% endblock %}
+
+{% block content %}
+<h1>Blog List</h1>
+<ul class="list-group">
+    {% for blog in blogs %}
+    <li class="list-group-item">
+        <h5>{{ blog.title }}</h5>
+        <p>{{ blog.content }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
